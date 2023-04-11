@@ -22,13 +22,12 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 	UFUNCTION(BlueprintCallable)
 	void SpawnWolf();
 
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
 private:
 	UPROPERTY(BlueprintReadWrite, Category = "Spawn", meta = (AllowPrivateAccess = "true"))
 		TSubclassOf<AWolf> WolfAsset;
